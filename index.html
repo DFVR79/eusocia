@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EUSOCIA | Genetics, Bioinformatics & Applied Biological Research</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #18251f;
+  background: #f8faf8;
+  line-height: 1.6;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(248,250,248,0.95);
+  border-bottom: 1px solid #e1e8e3;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #183c2c;
+}
+
+nav a {
+  text-decoration: none;
+  color: #33483e;
+  margin-left: 30px;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: #1e7650;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 8% 80px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 25%, #dcebe2 0, transparent 32%),
+    linear-gradient(135deg, #f8faf8, #edf4ef);
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.eyebrow {
+  color: #287252;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -4px;
+  color: #173b2b;
+}
+
+.hero h2 {
+  margin-top: 30px;
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.hero p {
+  margin-top: 25px;
+  max-width: 680px;
+  font-size: 1.1rem;
+  color: #53645b;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 25px;
+  background: #1d6244;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+section {
+  padding: 100px 8%;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color: #183c2c;
+}
+
+.section-intro {
+  max-width: 700px;
+  color: #607067;
+  margin-bottom: 50px;
+}
+
+.services {
+  background: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  padding: 35px;
+  border: 1px solid #dfe7e2;
+  background: #fbfcfb;
+  min-height: 270px;
+}
+
+.number {
+  font-size: 0.8rem;
+  color: #32815d;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #173b2b;
+}
+
+.card p {
+  color: #637169;
+}
+
+.expertise {
+  background: #173b2b;
+  color: white;
+}
+
+.expertise .section-title {
+  color: white;
+}
+
+.expertise .section-intro {
+  color: #c7d5cd;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.expertise h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.expertise p {
+  color: #c7d5cd;
+}
+
+.about {
+  background: #f5f8f6;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 70px;
+  max-width: 1100px;
+}
+
+.about-name {
+  font-size: 2rem;
+  color: #173b2b;
+}
+
+.about-role {
+  color: #32815d;
+  margin-top: 8px;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+  color: #526158;
+}
+
+.contact {
+  text-align: center;
+  background: white;
+}
+
+.contact .section-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  padding: 30px 8%;
+  border-top: 1px solid #e1e8e3;
+  display: flex;
+  justify-content: space-between;
+  color: #758078;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  nav .links {
+    display: none;
+  }
+
+  .grid,
+  .expertise-grid,
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  section {
+    padding: 75px 7%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">EUSOCIA</div>
+
+  <div class="links">
+    <a href="#services">Services</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Scientific consulting & research
+    </div>
+
+    <h1>EUSOCIA</h1>
+
+    <h2>
+      Genetics, Bioinformatics<br>
+      & Applied Biological Research
+    </h2>
+
+    <p>
+      Independent scientific expertise connecting biological data,
+      quantitative genetics and field knowledge to research,
+      innovation and decision-making.
+    </p>
+
+    <a class="button" href="#contact">
+      Discuss a project
+    </a>
+
+  </div>
+
+</header>
+
+<section class="services" id="services">
+
+  <h2 class="section-title">Services</h2>
+
+  <p class="section-intro">
+    Scientific support from experimental design and biological data
+    analysis to interpretation, publication and knowledge transfer.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="number">01</div>
+      <h3>Bioinformatics & Genomics</h3>
+      <p>
+        Analysis of genomic and molecular datasets, SNP data,
+        population structure, genetic diversity and reproducible
+        analytical workflows.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">02</div>
+      <h3>Genetics & Breeding</h3>
+      <p>
+        Population genetics, quantitative genetics, breeding
+        strategies, genotype × environment interactions and
+        biological interpretation.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="number">03</div>
+      <h3>Scientific R&D</h3>
+      <p>
+        Experimental design, research strategy, data interpretation,
+        scientific writing and support for collaborative R&D projects.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="expertise" id="expertise">
+
+  <h2 class="section-title">From molecules to populations</h2>
+
+  <p class="section-intro">
+    EUSOCIA combines computational approaches with a strong
+    understanding of biological systems and field realities.
+  </p>
+
+  <div class="expertise-grid">
+
+    <div>
+      <h3>Genetics & Bioinformatics</h3>
+      <p>
+        Genomics, gene expression, population genetics,
+        molecular biology, SNP datasets, statistical genetics
+        and biological data analysis.
+      </p>
+    </div>
+
+    <div>
+      <h3>Honeybee Science</h3>
+      <p>
+        Honeybee genetics, reproduction, breeding, colony
+        phenotypes, ecotoxicology and interactions between
+        genetics, environment and management.
+      </p>
+    </div>
+
+    <div>
+      <h3>Agroecology & Biodiversity</h3>
+      <p>
+        Pollinators, biodiversity, biological resources and
+        the integration of ecological knowledge into applied
+        research and innovation.
+      </p>
+    </div>
+
+    <div>
+      <h3>Scientific Communication</h3>
+      <p>
+        Research synthesis, scientific publications, technical
+        reports, training and translation of complex biological
+        results into actionable knowledge.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="about" id="about">
+
+  <div class="about-container">
+
+    <div>
+      <div class="about-name">Damien Fèvre, PhD</div>
+      <div class="about-role">
+        Founder · Scientist · Consultant
+      </div>
+    </div>
+
+    <div class="about-text">
+
+      <p>
+        EUSOCIA was founded by Damien Fèvre, a geneticist and
+        bioinformatician with international experience in academic
+        research, applied genetics and biological data science.
+      </p>
+
+      <p>
+        His work spans molecular biology, genomics, population
+        genetics and quantitative approaches, with particular
+        expertise in honeybee biology and breeding.
+      </p>
+
+      <p>
+        This scientific background is complemented by practical
+        experience in beekeeping, agroecology, biodiversity and
+        higher education, allowing EUSOCIA to connect data analysis
+        with the biological systems from which those data originate.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <h2 class="section-title">Let's work together</h2>
+
+  <p class="section-intro">
+    Research collaboration, bioinformatics analysis,
+    scientific consulting or R&D project?
+  </p>
+
+  <a class="button" href="mailto:contact@eusocia.fr>
+    Contact EUSOCIA
+  </a>
+
+</section>
+
+<footer>
+  <span>© 2026 EUSOCIA</span>
+  <span>Genetics · Bioinformatics · Biological Research</span>
+</footer>
+
+</body>
+</html>
