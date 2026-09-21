@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
 <meta charset="UTF-8">
@@ -41,7 +41,7 @@ body {
 
 
 /* =========================================================
-   HEADER
+   HEADER — DESKTOP
    ========================================================= */
 
 header {
@@ -71,21 +71,17 @@ header {
 
 nav {
     margin-left: auto;
-
     display: flex;
     align-items: center;
     gap: 31px;
-
     white-space: nowrap;
 }
 
 nav a {
     color: var(--dark);
-
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 1.1px;
-
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -101,26 +97,21 @@ nav .language {
 
 
 /* =========================================================
-   HERO
+   HERO — DESKTOP
    ========================================================= */
 
 .hero {
     position: relative;
-
     width: 100%;
     height: 660px;
-
     margin: 0;
     padding: 0;
-
     overflow: hidden;
-
     background: #e7b516;
 }
 
 .hero-image {
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -128,7 +119,6 @@ nav .language {
     height: auto;
 
     display: block;
-
     margin: 0;
     padding: 0;
 
@@ -136,78 +126,58 @@ nav .language {
 }
 
 
-/* =========================================================
-   HERO TEXT
-   ========================================================= */
-
-/* TEXTE MOBILE */
+/* DESKTOP TEXT */
 
 .hero-content {
-    position: static;
+    position: absolute;
+
+    left: 55px;
+    top: 52%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
 }
 
-/* petite ligne + titre AU-DESSUS de l'abeille */
-
 .hero-line {
-    position: absolute;
-    z-index: 3;
-
-    top: 38px;
-    left: 22px;
-
-    width: 42px;
+    width: 45px;
     height: 1px;
 
-    margin: 0;
+    margin: 0 0 23px 0;
 
     background: var(--gold);
 }
 
 .hero h1 {
-    position: absolute;
-    z-index: 3;
-
-    top: 62px;
-    left: 22px;
-    right: 18px;
-
     margin: 0;
 
     color: var(--dark);
 
-    font-size: 27px;
+    font-size: 46px;
     font-weight: 300;
-    line-height: 1.08;
-    letter-spacing: -0.7px;
 
-    white-space: normal;
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+
+    white-space: nowrap;
 }
 
-/* SOUS-TITRES SOUS L'ABEILLE */
-
 .hero-subtitles {
-    position: absolute;
-    z-index: 3;
-
-    left: 22px;
-    right: 18px;
-    bottom: 28px;
-
-    margin: 0;
+    margin-top: 29px;
 }
 
 .hero-subtitles p {
-    margin: 3px 0;
+    margin: 4px 0;
 
     color: var(--dark);
 
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.35;
 
-    white-space: normal;
+    line-height: 1.45;
+    letter-spacing: 0.15px;
 }
-   
+
 
 /* =========================================================
    EXPERTISE
@@ -218,7 +188,6 @@ nav .language {
     max-width: 1100px;
 
     margin: 0 auto;
-
     padding: 90px 35px 105px;
 }
 
@@ -231,21 +200,17 @@ nav .language {
     font-weight: 400;
 
     letter-spacing: 3px;
-
     text-transform: uppercase;
 }
 
 .expertise-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 55px;
 }
 
 .expertise-card {
     padding-top: 24px;
-
     border-top: 1px solid #d0d3d3;
 }
 
@@ -256,7 +221,6 @@ nav .language {
 
     font-size: 20px;
     font-weight: 400;
-
     line-height: 1.25;
 }
 
@@ -265,15 +229,12 @@ nav .language {
     padding: 0;
 
     list-style: none;
-
     color: var(--grey);
 }
 
 .expertise-card li {
     margin: 9px 0;
-
     font-size: 15px;
-
     line-height: 1.4;
 }
 
@@ -284,9 +245,7 @@ nav .language {
 
 .research {
     width: 100%;
-
     background: var(--dark);
-
     color: white;
 }
 
@@ -295,7 +254,6 @@ nav .language {
     max-width: 1100px;
 
     margin: 0 auto;
-
     padding: 100px 35px;
 }
 
@@ -304,7 +262,6 @@ nav .language {
 
     font-size: 46px;
     font-weight: 300;
-
     line-height: 1.15;
 }
 
@@ -316,7 +273,6 @@ nav .language {
     color: #cbd0d2;
 
     font-size: 17px;
-
     line-height: 1.7;
 }
 
@@ -330,13 +286,10 @@ nav .language {
     max-width: 1100px;
 
     margin: 0 auto;
-
     padding: 100px 35px;
 
     display: grid;
-
     grid-template-columns: 1fr 2fr;
-
     gap: 70px;
 }
 
@@ -353,7 +306,6 @@ nav .language {
     color: var(--grey);
 
     font-size: 17px;
-
     line-height: 1.7;
 }
 
@@ -363,7 +315,6 @@ nav .language {
 
 .about-text strong {
     color: var(--dark);
-
     font-weight: 500;
 }
 
@@ -377,7 +328,6 @@ nav .language {
     max-width: 1100px;
 
     margin: 0 auto;
-
     padding: 80px 35px 100px;
 
     border-top: 1px solid #ddd;
@@ -392,7 +342,6 @@ nav .language {
 
 .contact p {
     margin: 0 0 30px;
-
     color: var(--grey);
 }
 
@@ -426,7 +375,6 @@ footer {
     padding: 30px;
 
     background: var(--lightgrey);
-
     color: var(--grey);
 
     text-align: center;
@@ -437,10 +385,12 @@ footer {
 
 
 /* =========================================================
-   MOBILE
+   SMARTPHONE ONLY
    ========================================================= */
 
 @media (max-width: 700px) {
+
+    /* HEADER */
 
     header {
         height: 85px;
@@ -468,7 +418,7 @@ footer {
     }
 
 
-    /* PHOTO : on conserve le cadrage actuel */
+    /* HERO */
 
     .hero {
         position: relative;
@@ -476,6 +426,11 @@ footer {
         height: 480px;
         overflow: hidden;
     }
+
+    /*
+       On garde exactement le cadrage mobile
+       de la photo.
+    */
 
     .hero-image {
         position: absolute;
@@ -493,53 +448,96 @@ footer {
     }
 
 
-    /* TEXTE : remonté au-dessus de l'abeille */
+    /*
+       IMPORTANT :
+       le conteneur ne positionne plus
+       les textes ensemble.
+    */
 
     .hero-content {
-        position: absolute;
-
-        left: 22px;
-        right: 18px;
-
-        top: 58px;
-
+        position: static;
         transform: none;
-
-        z-index: 2;
     }
 
+
+    /*
+       TITRE :
+       au-dessus de l'abeille
+    */
+
     .hero-line {
+        position: absolute;
+
+        top: 28px;
+        left: 22px;
+
+        z-index: 3;
+
         width: 42px;
-        margin-bottom: 15px;
+        height: 1px;
+
+        margin: 0;
+
+        background: var(--gold);
     }
 
     .hero h1 {
+        position: absolute;
+
+        top: 50px;
+        left: 22px;
+        right: 18px;
+
+        z-index: 3;
+
         margin: 0;
 
-        font-size: 27px;
+        color: var(--dark);
+
+        font-size: 29px;
+        font-weight: 300;
+
         line-height: 1.08;
-        letter-spacing: -0.7px;
+        letter-spacing: -0.8px;
 
         white-space: normal;
     }
 
+
+    /*
+       SOUS-TITRES :
+       indépendants du titre,
+       sous l'abeille
+    */
+
     .hero-subtitles {
-        margin-top: 18px;
+        position: absolute;
+
+        left: 22px;
+        right: 18px;
+        bottom: 24px;
+
+        z-index: 3;
+
+        margin: 0;
     }
 
     .hero-subtitles p {
-        margin: 3px 0;
+        margin: 4px 0;
 
-        font-size: 13px;
+        color: var(--dark);
+
+        font-size: 14px;
+        font-weight: 400;
+
         line-height: 1.35;
-
         letter-spacing: 0;
 
         white-space: normal;
     }
 
 
-    /* CONTENT */
+    /* RESTE DU SITE */
 
     .expertise {
         padding: 60px 25px;
@@ -560,9 +558,7 @@ footer {
 
     .about {
         padding: 70px 25px;
-
         grid-template-columns: 1fr;
-
         gap: 30px;
     }
 
@@ -578,6 +574,10 @@ footer {
 <body>
 
 
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
 <header>
 
     <a class="brand" href="/">
@@ -588,13 +588,14 @@ footer {
 
         <a href="#expertise">Expertise</a>
 
-        <a href="#research">Recherche</a>
+        <a href="#research">Research</a>
 
-        <a href="#about">À propos</a>
+        <a href="#about">About</a>
 
         <a href="#contact">Contact</a>
 
-        <a class="language" href="/en/">FR | EN</a>
+        <!-- French page will be added afterwards -->
+        <a class="language" href="#">FR | EN</a>
 
     </nav>
 
@@ -604,30 +605,32 @@ footer {
 <main>
 
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+     ========================================================= -->
 
 <section class="hero">
 
     <img
         class="hero-image"
         src="Bee_happy_(Unsplash).jpg"
-        alt="Abeille en vol approchant une fleur"
+        alt="Honeybee in flight approaching a flower"
     >
 
     <div class="hero-content">
 
         <div class="hero-line"></div>
 
-        <h1>De la génétique aux écosystèmes.</h1>
+        <h1>Science from genes to ecosystems.</h1>
 
         <div class="hero-subtitles">
 
             <p>
-                Génétique · Bioinformatique · Biologie appliquée
+                Genetics · Bioinformatics · Applied Biology
             </p>
 
             <p>
-                Abeilles · Pollinisation · Agroécologie · Biodiversité
+                Honeybees · Pollination · Agroecology · Biodiversity
             </p>
 
         </div>
@@ -637,12 +640,14 @@ footer {
 </section>
 
 
-<!-- EXPERTISE -->
+<!-- =========================================================
+     EXPERTISE
+     ========================================================= -->
 
 <section class="expertise" id="expertise">
 
     <div class="section-label">
-        Expertise scientifique
+        Scientific Expertise
     </div>
 
     <div class="expertise-grid">
@@ -651,15 +656,15 @@ footer {
         <article class="expertise-card">
 
             <h2>
-                Génétique &amp;<br>
-                Bioinformatique
+                Genetics &amp;<br>
+                Bioinformatics
             </h2>
 
             <ul>
-                <li>Génétique moléculaire</li>
-                <li>Séquençage &amp; génotypage</li>
-                <li>Génomique des populations</li>
-                <li>Bioinformatique &amp; analyse de données</li>
+                <li>Molecular genetics</li>
+                <li>Sequencing &amp; genotyping</li>
+                <li>Population genomics</li>
+                <li>Bioinformatics &amp; data analysis</li>
             </ul>
 
         </article>
@@ -668,15 +673,15 @@ footer {
         <article class="expertise-card">
 
             <h2>
-                Abeilles &amp;<br>
-                Pollinisation
+                Honeybees &amp;<br>
+                Pollination
             </h2>
 
             <ul>
-                <li>Biologie de l'abeille</li>
-                <li>Sélection &amp; amélioration génétique</li>
-                <li>Pollinisation</li>
-                <li>Phénotypes des colonies</li>
+                <li>Honeybee biology</li>
+                <li>Breeding &amp; selection</li>
+                <li>Pollination</li>
+                <li>Colony phenotypes</li>
             </ul>
 
         </article>
@@ -685,15 +690,15 @@ footer {
         <article class="expertise-card">
 
             <h2>
-                Agroécologie &amp;<br>
-                Biodiversité
+                Agroecology &amp;<br>
+                Biodiversity
             </h2>
 
             <ul>
-                <li>Écologie appliquée</li>
-                <li>Biodiversité</li>
+                <li>Applied ecology</li>
+                <li>Biodiversity</li>
                 <li>Conservation</li>
-                <li>Agroécosystèmes</li>
+                <li>Agroecosystems</li>
             </ul>
 
         </article>
@@ -704,25 +709,27 @@ footer {
 </section>
 
 
-<!-- RESEARCH -->
+<!-- =========================================================
+     RESEARCH
+     ========================================================= -->
 
 <section class="research" id="research">
 
     <div class="research-inner">
 
         <div class="section-label">
-            Recherche &amp; Innovation
+            Research &amp; Innovation
         </div>
 
         <h2>
-            Science indépendante.<br>
-            Recherche appliquée.
+            Independent science.<br>
+            Applied research.
         </h2>
 
         <p>
-            Expertise scientifique de la conception expérimentale à
-            l'interprétation biologique : analyse de données, collaborations
-            scientifiques, rédaction scientifique et projets de R&amp;D.
+            Scientific expertise from experimental design to biological
+            interpretation, including data analysis, research collaborations,
+            scientific writing and R&amp;D projects.
         </p>
 
     </div>
@@ -730,14 +737,16 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
 
 <section class="about" id="about">
 
     <div>
 
         <div class="section-label">
-            À propos
+            About
         </div>
 
         <h2>
@@ -751,14 +760,14 @@ footer {
 
         <p>
             <strong>
-                Généticien · Bioinformaticien · Spécialiste de l'abeille
+                Geneticist · Bioinformatician · Honeybee Scientist
             </strong>
         </p>
 
         <p>
-            Fondateur d'EUSOCIA. Conseil scientifique et recherche en génétique,
-            génomique, bioinformatique, biologie de l'abeille, pollinisation,
-            agroécologie et biodiversité.
+            Founder of EUSOCIA. Scientific consulting and research spanning
+            genetics, genomics, bioinformatics, honeybee biology, pollination,
+            agroecology and biodiversity.
         </p>
 
     </div>
@@ -766,7 +775,9 @@ footer {
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
 
 <section class="contact" id="contact">
 
@@ -775,18 +786,18 @@ footer {
     </div>
 
     <h2>
-        Travaillons ensemble.
+        Let's work together.
     </h2>
 
     <p>
-        Conseil scientifique · Recherche · Collaborations
+        Scientific consulting · Research · Collaborations
     </p>
 
     <a
         class="contact-button"
         href="mailto:YOUR-EMAIL-HERE"
     >
-        Contacter EUSOCIA
+        Contact EUSOCIA
     </a>
 
 </section>
