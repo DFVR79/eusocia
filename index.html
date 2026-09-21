@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>EUSOCIA | Scientific Consulting & Research</title>
+
   <meta name="description"
         content="EUSOCIA provides scientific consulting and research in genetics, bioinformatics, applied biology, honeybees, pollination, agroecology and biodiversity.">
 
   <style>
+
     :root {
       --dark: #182024;
       --gold: #c99118;
@@ -34,19 +36,24 @@
       line-height: 1.6;
     }
 
-    /* ---------- HEADER ---------- */
+
+    /* ========================================
+       HEADER
+       ======================================== */
 
     header {
       max-width: 1250px;
       margin: auto;
       padding: 28px 40px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .brand img {
-      width: 270px;
+      width: 390px;
+      max-width: 100%;
       display: block;
     }
 
@@ -54,6 +61,7 @@
       display: flex;
       align-items: center;
       gap: 30px;
+
       font-size: 13px;
       letter-spacing: 1.3px;
       text-transform: uppercase;
@@ -73,13 +81,18 @@
       margin-left: 15px;
     }
 
-    /* ---------- HERO ---------- */
+
+    /* ========================================
+       HERO
+       ======================================== */
 
     .hero {
       min-height: 65vh;
       max-width: 1150px;
       margin: auto;
+
       padding: 100px 40px 120px;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -93,31 +106,38 @@
     }
 
     .hero h1 {
-      font-size: clamp(42px, 6vw, 78px);
+      font-size: clamp(42px, 4vw, 64px);
       font-weight: 300;
-      line-height: 1.08;
-      letter-spacing: -2px;
-      max-width: 850px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+
+      max-width: none;
+      white-space: nowrap;
+    }
+
+    .hero .disciplines,
+    .hero .fields {
+      font-size: 20px;
+      letter-spacing: 0.8px;
+      color: var(--dark);
     }
 
     .hero .disciplines {
       margin-top: 45px;
-      font-size: 19px;
-      letter-spacing: 1px;
     }
 
     .hero .fields {
-      margin-top: 7px;
-      color: var(--grey);
-      font-size: 17px;
-      letter-spacing: .7px;
+      margin-top: 5px;
     }
 
-    /* ---------- PHOTO ---------- */
+
+    /* ========================================
+       BEE IMAGE
+       ======================================== */
 
     .bee-image {
       width: 100%;
-      background: #f1f2f0;
+      background: var(--lightgrey);
     }
 
     .bee-image img {
@@ -126,7 +146,10 @@
       display: block;
     }
 
-    /* ---------- EXPERTISE ---------- */
+
+    /* ========================================
+       EXPERTISE
+       ======================================== */
 
     .expertise {
       max-width: 1150px;
@@ -169,7 +192,10 @@
       margin: 8px 0;
     }
 
-    /* ---------- RESEARCH ---------- */
+
+    /* ========================================
+       RESEARCH
+       ======================================== */
 
     .research {
       background: var(--dark);
@@ -198,12 +224,16 @@
       max-width: 720px;
     }
 
-    /* ---------- ABOUT ---------- */
+
+    /* ========================================
+       ABOUT
+       ======================================== */
 
     .about {
       max-width: 1150px;
       margin: auto;
       padding: 110px 40px;
+
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 80px;
@@ -225,7 +255,10 @@
       font-weight: 500;
     }
 
-    /* ---------- CONTACT ---------- */
+
+    /* ========================================
+       CONTACT
+       ======================================== */
 
     .contact {
       border-top: 1px solid #ddd;
@@ -247,14 +280,18 @@
 
     .contact-button {
       display: inline-block;
+
       border: 1px solid var(--dark);
       padding: 13px 25px;
+
       color: var(--dark);
       text-decoration: none;
+
       font-size: 13px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      transition: .2s;
+
+      transition: 0.2s;
     }
 
     .contact-button:hover {
@@ -262,18 +299,27 @@
       color: white;
     }
 
-    /* ---------- FOOTER ---------- */
+
+    /* ========================================
+       FOOTER
+       ======================================== */
 
     footer {
       background: var(--lightgrey);
       text-align: center;
+
       padding: 30px;
+
       color: var(--grey);
+
       font-size: 12px;
       letter-spacing: 1px;
     }
 
-    /* ---------- MOBILE ---------- */
+
+    /* ========================================
+       MOBILE
+       ======================================== */
 
     @media (max-width: 800px) {
 
@@ -282,7 +328,7 @@
       }
 
       .brand img {
-        width: 190px;
+        width: 220px;
       }
 
       nav a:not(.language) {
@@ -295,19 +341,18 @@
       }
 
       .hero h1 {
+        font-size: 42px;
         letter-spacing: -1px;
+
+        /* On autorise le retour à la ligne
+           uniquement sur petit écran */
+        white-space: normal;
       }
 
-      .hero .disciplines {
-        font-size: 17px;
-      }
-
+      .hero .disciplines,
       .hero .fields {
-        font-size: 15px;
-      }
-
-      .bee-image {
-        height: 260px;
+        font-size: 17px;
+        letter-spacing: 0.5px;
       }
 
       .expertise {
@@ -333,35 +378,54 @@
         padding: 70px 25px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
+
+
+<!-- ==========================================
+     HEADER
+     ========================================== -->
 
 <header>
 
   <a class="brand" href="#">
-    <img src="eusocia_logo.png" alt="EUSOCIA Scientific Consulting & Research">
+    <img src="eusocia_logo.png" alt="EUSOCIA">
   </a>
 
   <nav>
+
     <a href="#expertise">Expertise</a>
+
     <a href="#research">Research</a>
+
     <a href="#about">About</a>
+
     <a href="#contact">Contact</a>
+
     <a class="language" href="#">FR | EN</a>
+
   </nav>
 
 </header>
 
 
+
 <main>
+
+
+  <!-- ========================================
+       HERO
+       ======================================== -->
 
   <section class="hero">
 
     <div class="hero-line"></div>
 
-    <h1>Science from genes<br>to ecosystems.</h1>
+    <h1>Science from genes to ecosystems.</h1>
 
     <p class="disciplines">
       Genetics · Bioinformatics · Applied Biology
@@ -374,60 +438,111 @@
   </section>
 
 
+
+  <!-- ========================================
+       BEE IMAGE
+       ======================================== -->
+
   <section class="bee-image">
-    <img src="Bee_happy_(Unsplash).jpg"
-         alt="Honeybee in flight approaching a flower">
+
+    <img
+      src="Bee_happy_(Unsplash).jpg"
+      alt="Honeybee in flight approaching a flower"
+    >
+
   </section>
 
 
+
+  <!-- ========================================
+       EXPERTISE
+       ======================================== -->
+
   <section class="expertise" id="expertise">
 
-    <div class="section-label">Scientific expertise</div>
+    <div class="section-label">
+      Scientific expertise
+    </div>
+
 
     <div class="expertise-grid">
 
+
       <article class="expertise-card">
-        <h2>Genetics &<br>Bioinformatics</h2>
+
+        <h2>
+          Genetics &<br>
+          Bioinformatics
+        </h2>
+
         <ul>
           <li>Molecular genetics</li>
           <li>Sequencing & genotyping</li>
           <li>Population genomics</li>
           <li>Bioinformatics & data analysis</li>
         </ul>
+
       </article>
 
+
+
       <article class="expertise-card">
-        <h2>Honeybees &<br>Pollination</h2>
+
+        <h2>
+          Honeybees &<br>
+          Pollination
+        </h2>
+
         <ul>
           <li>Honeybee biology</li>
           <li>Breeding & selection</li>
           <li>Pollination</li>
           <li>Colony phenotypes</li>
         </ul>
+
       </article>
 
+
+
       <article class="expertise-card">
-        <h2>Agroecology &<br>Biodiversity</h2>
+
+        <h2>
+          Agroecology &<br>
+          Biodiversity
+        </h2>
+
         <ul>
           <li>Applied ecology</li>
           <li>Biodiversity</li>
           <li>Conservation</li>
           <li>Agroecosystems</li>
         </ul>
+
       </article>
+
 
     </div>
 
   </section>
 
 
+
+  <!-- ========================================
+       RESEARCH
+       ======================================== -->
+
   <section class="research" id="research">
 
     <div class="research-inner">
 
-      <div class="section-label">Research & Innovation</div>
+      <div class="section-label">
+        Research & Innovation
+      </div>
 
-      <h2>Independent science.<br>Applied research.</h2>
+      <h2>
+        Independent science.<br>
+        Applied research.
+      </h2>
 
       <p>
         Scientific expertise from experimental design to biological
@@ -440,16 +555,32 @@
   </section>
 
 
+
+  <!-- ========================================
+       ABOUT
+       ======================================== -->
+
   <section class="about" id="about">
 
     <div>
-      <div class="section-label">About</div>
-      <h2>Damien Fèvre, PhD</h2>
+
+      <div class="section-label">
+        About
+      </div>
+
+      <h2>
+        Damien Fèvre, PhD
+      </h2>
+
     </div>
 
+
     <div class="about-text">
+
       <p>
-        <strong>Geneticist · Bioinformatician · Honeybee Scientist</strong>
+        <strong>
+          Geneticist · Bioinformatician · Honeybee Scientist
+        </strong>
       </p>
 
       <p style="margin-top:18px;">
@@ -457,33 +588,51 @@
         genetics, genomics, bioinformatics, honeybee biology, pollination,
         agroecology and biodiversity.
       </p>
+
     </div>
 
   </section>
 
 
+
+  <!-- ========================================
+       CONTACT
+       ======================================== -->
+
   <section class="contact" id="contact">
 
-    <div class="section-label">Contact</div>
+    <div class="section-label">
+      Contact
+    </div>
 
-    <h2>Let's work together.</h2>
+    <h2>
+      Let's work together.
+    </h2>
 
     <p>
       Scientific consulting · Research · Collaborations
     </p>
 
-    <a class="contact-button" href="mailto:YOUR-EMAIL-HERE">
+    <a
+      class="contact-button"
+      href="mailto:YOUR-EMAIL-HERE"
+    >
       Contact EUSOCIA
     </a>
 
   </section>
 
+
 </main>
 
 
+
 <footer>
+
   © 2026 EUSOCIA · Scientific Consulting & Research
+
 </footer>
+
 
 </body>
 </html>
