@@ -1,414 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>EUSOCIA | Scientific Consulting & Research</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="EUSOCIA provides scientific consulting and research in genetics, bioinformatics, applied biology, honeybees, pollination, agroecology and biodiversity.">
+<title>EUSOCIA | Scientific Consulting & Research</title>
 
-  <style>
+<meta name="description"
+content="EUSOCIA provides scientific consulting and research in genetics, bioinformatics, applied biology, honeybees, pollination, agroecology and biodiversity.">
 
-    :root {
-      --dark: #182024;
-      --gold: #c99118;
-      --offwhite: #fafaf8;
-      --lightgrey: #f1f2f0;
-      --grey: #687176;
-    }
+<style>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* ==================================================
+   GENERAL
+   ================================================== */
 
-    html {
-      scroll-behavior: smooth;
-    }
+:root {
+    --dark: #182024;
+    --gold: #c99118;
+    --offwhite: #fafaf8;
+    --lightgrey: #f1f2f0;
+    --grey: #687176;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: var(--offwhite);
-      line-height: 1.6;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background: var(--offwhite);
+    line-height: 1.6;
+}
 
 
-    /* ========================================
-       HEADER
-       ======================================== */
+/* ==================================================
+   HEADER
+   ================================================== */
 
-    header {
-      padding: 0 55px;
-      width: 100%;
-      height: 120px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+header {
+    width: 100%;
+    height: 125px;
 
-      background: var(--offwhite);
-    }
+    padding: 0 70px;
 
-    .brand img {
-      width: 430px;
-      display: block;
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--offwhite);
+}
+
+
+/* LOGO */
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.brand img {
+    display: block;
+    width: 430px;
+    height: auto;
+}
+
+
+/* MENU */
 
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 32px;
 
+    gap: 34px;
     margin-left: auto;
 
     font-size: 13px;
     letter-spacing: 1.3px;
     text-transform: uppercase;
+
+    white-space: nowrap;
 }
 
-    nav a {
-      color: var(--dark);
-      text-decoration: none;
-    }
+nav a {
+    color: var(--dark);
+    text-decoration: none;
+}
 
-    nav a:hover {
-      color: var(--gold);
-    }
+nav a:hover {
+    color: var(--gold);
+}
 
-    .language {
-      color: var(--gold);
-      margin-left: 15px;
-    }
+nav .language {
+    color: var(--gold);
+    margin-left: 8px;
+}
 
 
-    /* ========================================
-       HERO
-       ======================================== */
-
-/* ========================================
+/* ==================================================
    HERO
-   ======================================== */
+   ================================================== */
 
 .hero {
     position: relative;
+
     width: 100%;
     margin: 0;
     padding: 0;
+
     overflow: hidden;
+
+    background: #e7b516;
 }
 
+
+/* PHOTO */
+
 .hero-image {
+    display: block;
+
     width: 100%;
     height: auto;
-    display: block;
+
+    margin: 0;
+    padding: 0;
 }
+
+
+/* TEXT ON PHOTO */
 
 .hero-content {
     position: absolute;
+
     left: 70px;
     top: 50%;
+
     transform: translateY(-50%);
+
     z-index: 2;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+
     color: var(--dark);
 }
+
+
+/* SMALL GOLD LINE */
+
+.hero-line {
+    width: 58px;
+    height: 2px;
+
+    margin-bottom: 28px;
+
+    background: var(--gold);
+}
+
+
+/* MAIN TITLE */
 
 .hero h1 {
-    margin: 0 0 35px 0;
-    font-size: 54px;
+    margin: 0;
+
+    font-size: clamp(42px, 3.7vw, 60px);
     font-weight: 300;
-    line-height: 1.1;
+
+    line-height: 1.08;
     letter-spacing: -1.5px;
-    white-space: nowrap;
+
     color: var(--dark);
+
+    white-space: nowrap;
 }
 
-.hero-content p {
+
+/* TWO SUBTITLES — EXACTLY THE SAME STYLE */
+
+.hero-subtitles {
+    margin-top: 35px;
+}
+
+.hero-subtitles p {
     margin: 2px 0;
+
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 0.6px;
+
+    line-height: 1.55;
+    letter-spacing: 0.5px;
+
     color: var(--dark);
 }
 
 
-    /* ========================================
-       EXPERTISE
-       ======================================== */
+/* ==================================================
+   EXPERTISE
+   ================================================== */
 
-    .expertise {
-      max-width: 1150px;
-      margin: auto;
-      padding: 110px 40px;
+.expertise {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 110px 50px;
+}
+
+.section-label {
+    margin-bottom: 55px;
+
+    color: var(--gold);
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.expertise-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 70px;
+}
+
+.expertise-card {
+    padding-top: 28px;
+
+    border-top: 1px solid #ccd0d1;
+}
+
+.expertise-card h2 {
+    margin-bottom: 25px;
+
+    font-size: 23px;
+    font-weight: 500;
+
+    line-height: 1.3;
+}
+
+.expertise-card ul {
+    list-style: none;
+
+    color: var(--grey);
+}
+
+.expertise-card li {
+    margin: 8px 0;
+
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   RESEARCH
+   ================================================== */
+
+.research {
+    width: 100%;
+
+    background: var(--dark);
+
+    color: white;
+}
+
+.research-inner {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 110px 50px;
+}
+
+.research h2 {
+    margin-bottom: 30px;
+
+    font-size: clamp(36px, 4vw, 55px);
+    font-weight: 300;
+
+    line-height: 1.15;
+}
+
+.research p {
+    max-width: 760px;
+
+    color: #cbd0d2;
+
+    font-size: 18px;
+}
+
+
+/* ==================================================
+   ABOUT
+   ================================================== */
+
+.about {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 110px 50px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 80px;
+}
+
+.about h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about-text {
+    max-width: 720px;
+
+    color: var(--grey);
+
+    font-size: 18px;
+}
+
+.about-text strong {
+    color: var(--dark);
+
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   CONTACT
+   ================================================== */
+
+.contact {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 80px 50px 100px;
+
+    border-top: 1px solid #ddd;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.contact p {
+    margin-bottom: 30px;
+
+    color: var(--grey);
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border: 1px solid var(--dark);
+
+    color: var(--dark);
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    letter-spacing: 1.5px;
+
+    transition: 0.2s;
+}
+
+.contact-button:hover {
+    background: var(--dark);
+
+    color: white;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+footer {
+    padding: 30px;
+
+    background: var(--lightgrey);
+
+    color: var(--grey);
+
+    text-align: center;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 0 35px;
     }
 
-    .section-label {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      margin-bottom: 55px;
+    .brand img {
+        width: 320px;
+    }
+
+    nav {
+        gap: 18px;
+        font-size: 11px;
+    }
+
+    .hero-content {
+        left: 45px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-subtitles p {
+        font-size: 17px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 800px) {
+
+    header {
+        height: 90px;
+
+        padding: 0 22px;
+    }
+
+    .brand img {
+        width: 220px;
+    }
+
+    nav a:not(.language) {
+        display: none;
+    }
+
+    nav {
+        gap: 0;
+
+        font-size: 11px;
+    }
+
+    .hero {
+        height: 570px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 570px;
+
+        object-fit: cover;
+        object-position: 67% center;
+    }
+
+    .hero-content {
+        left: 25px;
+        right: 25px;
+
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+    .hero-line {
+        width: 45px;
+
+        margin-bottom: 22px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+
+        line-height: 1.08;
+
+        white-space: normal;
+    }
+
+    .hero-subtitles {
+        margin-top: 28px;
+    }
+
+    .hero-subtitles p {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+    .expertise {
+        padding: 80px 25px;
     }
 
     .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 65px;
-    }
+        grid-template-columns: 1fr;
 
-    .expertise-card {
-      border-top: 1px solid #ccd0d1;
-      padding-top: 28px;
-    }
-
-    .expertise-card h2 {
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1.3;
-      margin-bottom: 25px;
-    }
-
-    .expertise-card ul {
-      list-style: none;
-      color: var(--grey);
-    }
-
-    .expertise-card li {
-      margin: 8px 0;
-    }
-
-
-    /* ========================================
-       RESEARCH
-       ======================================== */
-
-    .research {
-      background: var(--dark);
-      color: white;
+        gap: 50px;
     }
 
     .research-inner {
-      max-width: 1150px;
-      margin: auto;
-      padding: 110px 40px;
+        padding: 80px 25px;
     }
-
-    .research .section-label {
-      color: var(--gold);
-    }
-
-    .research h2 {
-      font-size: clamp(34px, 4vw, 55px);
-      font-weight: 300;
-      margin-bottom: 30px;
-    }
-
-    .research p {
-      color: #cbd0d2;
-      font-size: 18px;
-      max-width: 720px;
-    }
-
-
-    /* ========================================
-       ABOUT
-       ======================================== */
 
     .about {
-      max-width: 1150px;
-      margin: auto;
-      padding: 110px 40px;
+        grid-template-columns: 1fr;
 
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 80px;
+        gap: 25px;
+
+        padding: 80px 25px;
     }
-
-    .about h2 {
-      font-size: 30px;
-      font-weight: 400;
-    }
-
-    .about-text {
-      font-size: 18px;
-      color: var(--grey);
-      max-width: 700px;
-    }
-
-    .about-text strong {
-      color: var(--dark);
-      font-weight: 500;
-    }
-
-
-    /* ========================================
-       CONTACT
-       ======================================== */
 
     .contact {
-      border-top: 1px solid #ddd;
-      max-width: 1150px;
-      margin: auto;
-      padding: 80px 40px 100px;
-    }
-
-    .contact h2 {
-      font-size: 38px;
-      font-weight: 300;
-      margin-bottom: 15px;
-    }
-
-    .contact p {
-      color: var(--grey);
-      margin-bottom: 30px;
-    }
-
-    .contact-button {
-      display: inline-block;
-
-      border: 1px solid var(--dark);
-      padding: 13px 25px;
-
-      color: var(--dark);
-      text-decoration: none;
-
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-
-      transition: 0.2s;
-    }
-
-    .contact-button:hover {
-      background: var(--dark);
-      color: white;
-    }
-
-
-    /* ========================================
-       FOOTER
-       ======================================== */
-
-    footer {
-      background: var(--lightgrey);
-      text-align: center;
-
-      padding: 30px;
-
-      color: var(--grey);
-
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-
-    /* ========================================
-       MOBILE
-       ======================================== */
-
-    @media (max-width: 800px) {
-
-      header {
-        padding: 20px;
-      }
-
-      .brand img {
-        width: 220px;
-      }
-
-      nav a:not(.language) {
-        display: none;
-      }
-
-      .hero {
-        min-height: 60vh;
-        padding: 80px 25px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-        letter-spacing: -1px;
-
-        /* On autorise le retour à la ligne
-           uniquement sur petit écran */
-        white-space: normal;
-      }
-
-      .hero .disciplines,
-      .hero .fields {
-        font-size: 17px;
-        letter-spacing: 0.5px;
-      }
-
-      .expertise {
-        padding: 80px 25px;
-      }
-
-      .expertise-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
-
-      .research-inner {
-        padding: 80px 25px;
-      }
-
-      .about {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 80px 25px;
-      }
-
-      .contact {
         padding: 70px 25px;
-      }
     }
+}
 
-  </style>
+</style>
+
 </head>
 
 
 <body>
 
 
-<!-- ==========================================
+<!-- ==================================================
      HEADER
-     ========================================== -->
+     ================================================== -->
 
 <header>
 
-  <a class="brand" href="#">
-    <img src="eusocia_logo.png" alt="EUSOCIA">
-  </a>
+    <a class="brand" href="#">
+        <img src="eusocia_logo.png" alt="EUSOCIA">
+    </a>
 
-  <nav>
+    <nav>
 
-    <a href="#expertise">Expertise</a>
+        <a href="#expertise">
+            Expertise
+        </a>
 
-    <a href="#research">Research</a>
+        <a href="#research">
+            Research
+        </a>
 
-    <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-    <a href="#contact">Contact</a>
+        <a href="#contact">
+            Contact
+        </a>
 
-    <a class="language" href="#">FR | EN</a>
+        <a class="language" href="#">
+            FR | EN
+        </a>
 
-  </nav>
+    </nav>
 
 </header>
-
 
 
 <main>
 
 
-  <!-- ========================================
-       HERO
-       ======================================== -->
+<!-- ==================================================
+     HERO — PHOTO + TEXT
+     ================================================== -->
 
 <section class="hero">
 
@@ -420,14 +607,119 @@ nav {
 
     <div class="hero-content">
 
-        <h1>Science from genes to ecosystems.</h1>
+        <div class="hero-line"></div>
+
+        <h1>
+            Science from genes to ecosystems.
+        </h1>
+
+        <div class="hero-subtitles">
+
+            <p>
+                Genetics · Bioinformatics · Applied Biology
+            </p>
+
+            <p>
+                Honeybees · Pollination · Agroecology · Biodiversity
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     EXPERTISE
+     ================================================== -->
+
+<section class="expertise" id="expertise">
+
+    <div class="section-label">
+        Scientific expertise
+    </div>
+
+    <div class="expertise-grid">
+
+
+        <article class="expertise-card">
+
+            <h2>
+                Genetics &amp;<br>
+                Bioinformatics
+            </h2>
+
+            <ul>
+                <li>Molecular genetics</li>
+                <li>Sequencing &amp; genotyping</li>
+                <li>Population genomics</li>
+                <li>Bioinformatics &amp; data analysis</li>
+            </ul>
+
+        </article>
+
+
+        <article class="expertise-card">
+
+            <h2>
+                Honeybees &amp;<br>
+                Pollination
+            </h2>
+
+            <ul>
+                <li>Honeybee biology</li>
+                <li>Breeding &amp; selection</li>
+                <li>Pollination</li>
+                <li>Colony phenotypes</li>
+            </ul>
+
+        </article>
+
+
+        <article class="expertise-card">
+
+            <h2>
+                Agroecology &amp;<br>
+                Biodiversity
+            </h2>
+
+            <ul>
+                <li>Applied ecology</li>
+                <li>Biodiversity</li>
+                <li>Conservation</li>
+                <li>Agroecosystems</li>
+            </ul>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     RESEARCH
+     ================================================== -->
+
+<section class="research" id="research">
+
+    <div class="research-inner">
+
+        <div class="section-label">
+            Research &amp; Innovation
+        </div>
+
+        <h2>
+            Independent science.<br>
+            Applied research.
+        </h2>
 
         <p>
-            Genetics · Bioinformatics · Applied Biology
-        </p>
-
-        <p>
-            Honeybees · Pollination · Agroecology · Biodiversity
+            Scientific expertise from experimental design to biological
+            interpretation, including data analysis, research collaborations,
+            scientific writing and R&amp;D projects.
         </p>
 
     </div>
@@ -435,186 +727,79 @@ nav {
 </section>
 
 
+<!-- ==================================================
+     ABOUT
+     ================================================== -->
 
-  <!-- ========================================
-       EXPERTISE
-       ======================================== -->
-
-  <section class="expertise" id="expertise">
-
-    <div class="section-label">
-      Scientific expertise
-    </div>
-
-
-    <div class="expertise-grid">
-
-
-      <article class="expertise-card">
-
-        <h2>
-          Genetics &<br>
-          Bioinformatics
-        </h2>
-
-        <ul>
-          <li>Molecular genetics</li>
-          <li>Sequencing & genotyping</li>
-          <li>Population genomics</li>
-          <li>Bioinformatics & data analysis</li>
-        </ul>
-
-      </article>
-
-
-
-      <article class="expertise-card">
-
-        <h2>
-          Honeybees &<br>
-          Pollination
-        </h2>
-
-        <ul>
-          <li>Honeybee biology</li>
-          <li>Breeding & selection</li>
-          <li>Pollination</li>
-          <li>Colony phenotypes</li>
-        </ul>
-
-      </article>
-
-
-
-      <article class="expertise-card">
-
-        <h2>
-          Agroecology &<br>
-          Biodiversity
-        </h2>
-
-        <ul>
-          <li>Applied ecology</li>
-          <li>Biodiversity</li>
-          <li>Conservation</li>
-          <li>Agroecosystems</li>
-        </ul>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ========================================
-       RESEARCH
-       ======================================== -->
-
-  <section class="research" id="research">
-
-    <div class="research-inner">
-
-      <div class="section-label">
-        Research & Innovation
-      </div>
-
-      <h2>
-        Independent science.<br>
-        Applied research.
-      </h2>
-
-      <p>
-        Scientific expertise from experimental design to biological
-        interpretation, including data analysis, research collaborations,
-        scientific writing and R&amp;D projects.
-      </p>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ========================================
-       ABOUT
-       ======================================== -->
-
-  <section class="about" id="about">
+<section class="about" id="about">
 
     <div>
 
-      <div class="section-label">
-        About
-      </div>
+        <div class="section-label">
+            About
+        </div>
 
-      <h2>
-        Damien Fèvre, PhD
-      </h2>
+        <h2>
+            Damien Fèvre, PhD
+        </h2>
 
     </div>
-
 
     <div class="about-text">
 
-      <p>
-        <strong>
-          Geneticist · Bioinformatician · Honeybee Scientist
-        </strong>
-      </p>
+        <p>
+            <strong>
+                Geneticist · Bioinformatician · Honeybee Scientist
+            </strong>
+        </p>
 
-      <p style="margin-top:18px;">
-        Founder of EUSOCIA. Scientific consulting and research spanning
-        genetics, genomics, bioinformatics, honeybee biology, pollination,
-        agroecology and biodiversity.
-      </p>
+        <p style="margin-top:18px;">
+            Founder of EUSOCIA. Scientific consulting and research spanning
+            genetics, genomics, bioinformatics, honeybee biology, pollination,
+            agroecology and biodiversity.
+        </p>
 
     </div>
 
-  </section>
+</section>
 
 
+<!-- ==================================================
+     CONTACT
+     ================================================== -->
 
-  <!-- ========================================
-       CONTACT
-       ======================================== -->
-
-  <section class="contact" id="contact">
+<section class="contact" id="contact">
 
     <div class="section-label">
-      Contact
+        Contact
     </div>
 
     <h2>
-      Let's work together.
+        Let's work together.
     </h2>
 
     <p>
-      Scientific consulting · Research · Collaborations
+        Scientific consulting · Research · Collaborations
     </p>
 
     <a
-      class="contact-button"
-      href="mailto:YOUR-EMAIL-HERE"
+        class="contact-button"
+        href="mailto:YOUR-EMAIL-HERE"
     >
-      Contact EUSOCIA
+        Contact EUSOCIA
     </a>
 
-  </section>
+</section>
 
 
 </main>
 
 
-
 <footer>
-
-  © 2026 EUSOCIA · Scientific Consulting & Research
-
+    © 2026 EUSOCIA · Scientific Consulting &amp; Research
 </footer>
 
 
 </body>
+
 </html>
