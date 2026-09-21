@@ -391,7 +391,6 @@ footer {
 @media (max-width: 700px) {
 
     /* HEADER */
-
     header {
         height: 85px;
         padding: 0 20px;
@@ -412,14 +411,12 @@ footer {
     nav .language {
         display: block;
         margin: 0;
-
         font-size: 13px;
         letter-spacing: 1px;
     }
 
 
-    /* HERO */
-
+    /* HERO SMARTPHONE */
     .hero {
         position: relative;
         width: 100%;
@@ -427,14 +424,9 @@ footer {
         overflow: hidden;
     }
 
-    /*
-       On garde exactement le cadrage mobile
-       de la photo.
-    */
-
+    /* PHOTO : ON NE CHANGE PAS LE CADRAGE */
     .hero-image {
         position: absolute;
-
         top: 0;
         left: 50%;
 
@@ -447,98 +439,76 @@ footer {
         object-position: 58% center;
     }
 
-
     /*
-       IMPORTANT :
-       le conteneur ne positionne plus
-       les textes ensemble.
+       Le titre et les sous-titres deviennent
+       indépendants sur smartphone.
     */
-
     .hero-content {
         position: static;
         transform: none;
     }
 
-
-    /*
-       TITRE :
-       au-dessus de l'abeille
-    */
-
+    /* LIGNE DORÉE AU-DESSUS */
     .hero-line {
         position: absolute;
-
-        top: 28px;
+        top: 25px;
         left: 22px;
-
-        z-index: 3;
 
         width: 42px;
         height: 1px;
-
         margin: 0;
 
         background: var(--gold);
+        z-index: 5;
     }
 
+    /* TITRE AU-DESSUS DE L'ABEILLE */
     .hero h1 {
         position: absolute;
-
-        top: 50px;
+        top: 47px;
         left: 22px;
         right: 18px;
-
-        z-index: 3;
 
         margin: 0;
 
         color: var(--dark);
 
-        font-size: 29px;
+        font-size: 27px;
         font-weight: 300;
-
         line-height: 1.08;
-        letter-spacing: -0.8px;
+        letter-spacing: -0.7px;
 
         white-space: normal;
+
+        z-index: 5;
     }
 
-
-    /*
-       SOUS-TITRES :
-       indépendants du titre,
-       sous l'abeille
-    */
-
+    /* SOUS-TITRES SOUS L'ABEILLE */
     .hero-subtitles {
         position: absolute;
-
         left: 22px;
         right: 18px;
-        bottom: 24px;
-
-        z-index: 3;
+        bottom: 22px;
 
         margin: 0;
+
+        z-index: 5;
     }
 
     .hero-subtitles p {
-        margin: 4px 0;
+        margin: 3px 0;
 
         color: var(--dark);
 
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 400;
-
         line-height: 1.35;
-        letter-spacing: 0;
 
         white-space: normal;
     }
 
 
     /* RESTE DU SITE */
-
     .expertise {
         padding: 60px 25px;
     }
@@ -567,6 +537,7 @@ footer {
     }
 }
 
+   
 </style>
 </head>
 
