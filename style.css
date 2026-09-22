@@ -90,8 +90,7 @@ nav .language {
 .hero {
     position: relative;
     width: 100%;
-    aspect-ratio: 3.24 / 1;
-   height: auto;
+    height: 430px;
     margin: 0;
     padding: 0;
     overflow: hidden;
