@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EUSOCIA | Scientific Consulting & Research</title>
+
+<style>
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+:root {
+    --dark: #182024;
+    --gold: #c99118;
+    --white: #fafaf8;
+    --grey: #687176;
+    --lightgrey: #f1f2f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background: var(--white);
+}
+
+
+/* =========================================================
+   HEADER — DESKTOP
+   ========================================================= */
+
+header {
+    width: 100%;
+    height: 105px;
+    padding: 0 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--white);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.brand img {
+    display: block;
+    width: 310px;
+    height: auto;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    white-space: nowrap;
+}
+
+nav a {
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+nav .language {
+    margin-left: 4px;
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   HERO — DESKTOP
+   ========================================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 660px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #e7b516;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    max-width: none;
+}
+
+
+/* DESKTOP TEXT */
+
+.hero-content {
+    position: absolute;
+
+    left: 55px;
+    top: 52%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+}
+
+.hero-line {
+    width: 45px;
+    height: 1px;
+
+    margin: 0 0 23px 0;
+
+    background: var(--gold);
+}
+
+.hero h1 {
+    margin: 0;
+
+    color: var(--dark);
+
+    font-size: 46px;
+    font-weight: 300;
+
+    line-height: 1.05;
+    letter-spacing: -1.4px;
+
+    white-space: nowrap;
+}
+
+.hero-subtitles {
+    margin-top: 29px;
+}
+
+.hero-subtitles p {
+    margin: 4px 0;
+
+    color: var(--dark);
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.45;
+    letter-spacing: 0.15px;
+}
+
+
+/* =========================================================
+   EXPERTISE
+   ========================================================= */
+
+.expertise {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 90px 35px 105px;
+}
+
+.section-label {
+    margin-bottom: 45px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 400;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+}
+
+.expertise-card {
+    padding-top: 24px;
+    border-top: 1px solid #d0d3d3;
+}
+
+.expertise-card h2 {
+    margin: 0 0 25px;
+
+    color: var(--dark);
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.expertise-card ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    color: var(--grey);
+}
+
+.expertise-card li {
+    margin: 9px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RESEARCH
+   ========================================================= */
+
+.research {
+    width: 100%;
+    background: var(--dark);
+    color: white;
+}
+
+.research-inner {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 100px 35px;
+}
+
+.research h2 {
+    margin: 0 0 30px;
+
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 1.15;
+}
+
+.research p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #cbd0d2;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 100px 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 70px;
+}
+
+.about h2 {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.about-text {
+    max-width: 700px;
+
+    color: var(--grey);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.about-text p {
+    margin: 0 0 18px;
+}
+
+.about-text strong {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 80px 35px 100px;
+
+    border-top: 1px solid #ddd;
+}
+
+.contact h2 {
+    margin: 0 0 15px;
+
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.contact p {
+    margin: 0 0 30px;
+    color: var(--grey);
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: 1px solid var(--dark);
+
+    color: var(--dark);
+
+    font-size: 12px;
+    letter-spacing: 1.4px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact-button:hover {
+    color: white;
+    background: var(--dark);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 30px;
+
+    background: var(--lightgrey);
+    color: var(--grey);
+
+    text-align: center;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SMARTPHONE ONLY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+    header {
+        height: 85px;
+        padding: 0 20px;
+    }
+
+    .brand img {
+        width: 205px;
+    }
+
+    nav {
+        margin-left: auto;
+    }
+
+    nav a:not(.language) {
+        display: none;
+    }
+
+    nav .language {
+        display: block;
+        margin: 0;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+
+    /* HERO SMARTPHONE */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+    }
+
+    /* PHOTO : ON NE CHANGE PAS LE CADRAGE */
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        width: auto;
+        height: 100%;
+
+        transform: translateX(-50%);
+
+        object-fit: cover;
+        object-position: 58% center;
+    }
+
+    /*
+       Le titre et les sous-titres deviennent
+       indépendants sur smartphone.
+    */
+    .hero-content {
+        position: static;
+        transform: none;
+    }
+
+    /* LIGNE DORÉE AU-DESSUS */
+    .hero-line {
+        position: absolute;
+        top: 25px;
+        left: 22px;
+
+        width: 42px;
+        height: 1px;
+        margin: 0;
+
+        background: var(--gold);
+        z-index: 5;
+    }
+
+    /* TITRE AU-DESSUS DE L'ABEILLE */
+    .hero h1 {
+        position: absolute;
+        top: 47px;
+        left: 22px;
+        right: 18px;
+
+        margin: 0;
+
+        color: var(--dark);
+
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 1.08;
+        letter-spacing: -0.7px;
+
+        white-space: normal;
+
+        z-index: 5;
+    }
+
+    /* SOUS-TITRES SOUS L'ABEILLE */
+    .hero-subtitles {
+        position: absolute;
+        left: 22px;
+        right: 18px;
+        bottom: 22px;
+
+        margin: 0;
+
+        z-index: 5;
+    }
+
+    .hero-subtitles p {
+        margin: 3px 0;
+
+        color: var(--dark);
+
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.35;
+
+        white-space: normal;
+    }
+
+
+    /* RESTE DU SITE */
+    .expertise {
+        padding: 60px 25px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .research-inner {
+        padding: 70px 25px;
+    }
+
+    .research h2 {
+        font-size: 36px;
+    }
+
+    .about {
+        padding: 70px 25px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact {
+        padding: 70px 25px;
+    }
+}
+
+   
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header>
+
+    <a class="brand" href="/">
+        <img src="eusocia_logo.png" alt="EUSOCIA">
+    </a>
+
+    <nav>
+
+        <a href="#expertise">Expertise</a>
+
+        <a href="#research">Research</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+        <!-- French page will be added afterwards -->
+        <a class="language" href="#">FR | EN</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+    <img
+        class="hero-image"
+        src="Bee_happy_(Unsplash).jpg"
+        alt="Honeybee in flight approaching a flower"
+    >
+
+    <div class="hero-content">
+
+        <div class="hero-line"></div>
+
+        <h1>Science from genes to ecosystems.</h1>
+
+        <div class="hero-subtitles">
+
+            <p>
+                Genetics · Bioinformatics · Applied Biology
+            </p>
+
+            <p>
+                Honeybees · Pollination · Agroecology · Biodiversity
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERTISE
+     ========================================================= -->
+
+<section class="expertise" id="expertise">
+
+    <div class="section-label">
+        Scientific Expertise
+    </div>
+
+    <div class="expertise-grid">
+
+
+        <article class="expertise-card">
+
+            <h2>
+                Genetics &amp;<br>
+                Bioinformatics
+            </h2>
+
+            <ul>
+                <li>Molecular genetics</li>
+                <li>Sequencing &amp; genotyping</li>
+                <li>Population genomics</li>
+                <li>Bioinformatics &amp; data analysis</li>
+            </ul>
+
+        </article>
+
+
+        <article class="expertise-card">
+
+            <h2>
+                Honeybees &amp;<br>
+                Pollination
+            </h2>
+
+            <ul>
+                <li>Honeybee biology</li>
+                <li>Breeding &amp; selection</li>
+                <li>Pollination</li>
+                <li>Colony phenotypes</li>
+            </ul>
+
+        </article>
+
+
+        <article class="expertise-card">
+
+            <h2>
+                Agroecology &amp;<br>
+                Biodiversity
+            </h2>
+
+            <ul>
+                <li>Applied ecology</li>
+                <li>Biodiversity</li>
+                <li>Conservation</li>
+                <li>Agroecosystems</li>
+            </ul>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH
+     ========================================================= -->
+
+<section class="research" id="research">
+
+    <div class="research-inner">
+
+        <div class="section-label">
+            Research &amp; Innovation
+        </div>
+
+        <h2>
+            Independent science.<br>
+            Applied research.
+        </h2>
+
+        <p>
+            Scientific expertise from experimental design to biological
+            interpretation, including data analysis, research collaborations,
+            scientific writing and R&amp;D projects.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
+<section class="about" id="about">
+
+    <div>
+
+        <div class="section-label">
+            About
+        </div>
+
+        <h2>
+            Damien Fèvre, PhD
+        </h2>
+
+    </div>
+
+
+    <div class="about-text">
+
+        <p>
+            <strong>
+                Geneticist · Bioinformatician · Honeybee Scientist
+            </strong>
+        </p>
+
+        <p>
+            Founder of EUSOCIA. Scientific consulting and research spanning
+            genetics, genomics, bioinformatics, honeybee biology, pollination,
+            agroecology and biodiversity.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-label">
+        Contact
+    </div>
+
+    <h2>
+        Let's work together.
+    </h2>
+
+    <p>
+        Scientific consulting · Research · Collaborations
+    </p>
+
+    <a
+        class="contact-button"
+        href="mailto:YOUR-EMAIL-HERE"
+    >
+        Contact EUSOCIA
+    </a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    © 2026 EUSOCIA · Scientific Consulting &amp; Research
+</footer>
+
+
+</body>
+</html>
