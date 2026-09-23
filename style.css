@@ -88,69 +88,16 @@ nav .language {
    ========================================================= */
 
 .hero {
-    position: relative;
     width: 100%;
-    height: auto;
     margin: 0;
     padding: 0;
-    overflow: visible;
-    background: #e7b516;
 }
 
-.hero-image {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 100%;
-    height: auto;
-    transform: none;
+.hero-banner {
     display: block;
-    margin: 0;
-    padding: 0;
-    max-width: none;
-
+    width: 100%;
+    height: auto;
 }
-
-/* DESKTOP TEXT */
-
-.hero-content {
-    position: absolute;
-    left: 42px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-.hero-line {
-    width: 34px;
-    height: 1px;
-    margin: 0 0 20px 0;
-    background: var(--gold);
-}
-
-.hero h1 {
-    margin: 0;
-    color: var(--dark);
-    font-size: 34px;
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -1px;
-    white-space: nowrap;
-}
-
-.hero-subtitles {
-    margin-top: 24px;
-}
-
-.hero-subtitles p {
-    margin: 4px 0;
-    color: var(--dark);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.45;
-    letter-spacing: 0;
-}
-
 
 /* =========================================================
    EXPERTISE
